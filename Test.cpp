@@ -157,7 +157,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at x-------
     for(int i=0; i< 3 ; i++){
         int number=01111111;
-        int power = pow(10,7);  //number between 1 digit to 8 digits
+        int power = pow(10,7);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -166,7 +166,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at -x------
     for(int i=0; i< 3 ; i++){
         int number=10111111;
-        int power = pow(10,6);  //number between 1 digit to 8 digits
+        int power = pow(10,6);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -175,7 +175,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at --x-----
     for(int i=0; i< 3 ; i++){
         int number=11011111;
-        int power = pow(10,5);  //number between 1 digit to 8 digits
+        int power = pow(10,5);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -184,7 +184,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at ---x----
     for(int i=0; i< 3 ; i++){
         int number=11101111;
-        int power = pow(10,4);  //number between 1 digit to 8 digits
+        int power = pow(10,4);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -193,7 +193,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at ----x---
     for(int i=0; i< 3 ; i++){
         int number=11110111;
-        int power = pow(10,3);  //number between 1 digit to 8 digits
+        int power = pow(10,3);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -202,7 +202,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at -----x--
     for(int i=0; i< 3 ; i++){
         int number=11111011;
-        int power = pow(10,2);  //number between 1 digit to 8 digits
+        int power = pow(10,2);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
@@ -211,7 +211,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at ------x-
     for(int i=0; i< 3 ; i++){
         int number=11111101;
-        int power = pow(10,1);  //number between 1 digit to 8 digits
+        int power = pow(10,1);  
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
