@@ -6,16 +6,17 @@
 #include "snowman.hpp"
 #include <cmath>
 #include <string>
+#include <algorithm>
 
 using namespace ariel;
 using namespace std;
 
-string remove_spaces(string need_to_del){
-    string res = need_to_del;
-    erase(res,'\t');
-    erase(res,'\n');
-    erase(res,' ');
-    return res;
+string remove_spaces(string input) {
+    input.erase(remove(input.begin(),input.end(), ' '), input.end());
+    input.erase(remove(input.begin(),input.end(), '\t'), input.end());
+    input.erase(remove(input.begin(),input.end(), '\n'), input.end());
+    input.erase(remove(input.begin(),input.end(), '\r'), input.end());
+    return input;
 }
 
 TEST_CASE("Hat"){
@@ -211,7 +212,7 @@ TEST_CASE("illegal digits"){
     //illegal digits at ------x-
     for(int i=0; i< 3 ; i++){
         int number=11111101;
-        int power = pow(10,1);  
+        int power = pow(10,1);
         int random= rand()%5+5; //number between 5- 9
         number += random*power;
         CHECK_THROWS(snowman(number));
